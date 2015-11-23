@@ -1,6 +1,6 @@
 {
   "name": "browserify-dot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Browserify transform to compile dot templates",
   "main": "lib/index.js",
   "scripts": {
