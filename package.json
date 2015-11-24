@@ -4,8 +4,8 @@
   "description": "Browserify transform to compile dot templates",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha test/spec.js",
-    "lint": "eslint ./"
+    "test": "npm run-script lint && tape test/*.js | faucet",
+    "lint": "eslint lib/ test/"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,11 @@
   },
   "devDependencies": {
     "browserify": "^12.0.1",
+    "concat-stream": "^1.5.1",
+    "eslint": "^1.10.1",
     "esprima": "^2.7.0",
-    "mocha": "^2.3.4"
+    "faucet": "0.0.1",
+    "lodash": "^3.10.1",
+    "tape": "^4.2.2"
   }
 }

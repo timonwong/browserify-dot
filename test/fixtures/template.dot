@@ -1,3 +1,5 @@
+<div>
 {{~ it.details :detail }}
-{{= detail.id }}: {{~ detail.title }}
+<p>{{= detail.id }}: {{! detail.title }}</p>
 {{~}}
+</div>
