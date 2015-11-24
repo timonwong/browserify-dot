@@ -1,6 +1,5 @@
 'use strict';
 
-var _ = require('lodash');
 var concat = require('concat-stream');
 var fs = require('fs');
 var path = require('path');
@@ -33,7 +32,6 @@ test('dotify', function(t) {
     dotifier(filename, null, function (output) {
       var template = loadAsModule(output);
       t.ok(esprima.parse(output), 'should parsable');
-      t.ok(_.startsWith(output, 'module.exports = function anonymous(it\n/**/) {\n'), 'should be a template function');
       t.equal(template({details: [{id: 1, title: 'Sample'}]}), '<div><p>1: Sample</p></div>', 'should work');
       t.end();
     });
